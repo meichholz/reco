@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'ripmp3'
+
+application = Ripmp3::Frontend.new
+application.setup ARGV
+application.run ARGV[0]
+
