@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'ripmp3'
+require File.basename(__FILE__, '.rb')
 
-application = Ripmp3::Frontend.new
+application = Reco::App.new
 application.setup ARGV
 application.run ARGV[0]
 

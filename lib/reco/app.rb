@@ -1,4 +1,4 @@
-module Ripmp3
+module Reco
   class Options
     @writables = %w[debugmask]
     @nonwritables = %w[
@@ -25,11 +25,7 @@ module Ripmp3
 
     @debug_masks={
       :wip        => 0x0001,
-      :signals    => 0x0002,
-      :server     => 0x0004,
-      :configfile => 0x0010,
-      :lockmail   => 0x0011,
-      :replay     => 0x0012,
+      :configfile => 0x0002,
       :all        => 0xFFFF,
     }
     class << self
@@ -60,12 +56,12 @@ module Ripmp3
 
   end
 
-  class Frontend
+  class App
     def initialize
     end
 
     def setup_config(argv)
-      App.configuration = Configuration.new(Frontend.commandline_options(argv))
+      Helper.configuration = Configuration.new(self.class.commandline_options(argv))
     end
 
     def setup(argv)
@@ -79,16 +75,16 @@ module Ripmp3
       when 'test'
         puts "running quick test"
       else
-        App.panic "Unknown MODE, try '#{App.name} help'"
+        Helper.panic "Unknown MODE, try '#{Helper.name} help'"
       end
     end
 
     def self.commandline_options(argv)
       opt=Options.new
       parser=OptionParser.new do |o|
-        o.banner = 'Usage: '+App.name+' {OPTIONS} [MODE]
+        o.banner = 'Usage: '+Helper.name+' {OPTIONS} [MODE]
   VERSION
-    '+App.version+'
+    '+Helper.version+'
 
   MODES
     test : run quick self test
@@ -102,7 +98,7 @@ module Ripmp3
         parser.parse! argv
         puts parser if argv[0]=='help'
       rescue OptionParser::ParseError => err
-        App.panic parser, "\nFATAL: #{err}"
+        Helper.panic parser, "\nFATAL: #{err}"
       end
       return opt
     end

@@ -1,6 +1,6 @@
-module Ripmp3
-  class App
-    Name = 'ripmp3'
+module Reco
+  class Helper
+    Name = File.basename(File.dirname(__FILE__))
     Version = VERSION
     @configuration = nil
     @logger = nil
@@ -17,7 +17,7 @@ module Ripmp3
       end
 
       def verbalize(str)
-        $stderr.puts(str) if App.configuration.verbose
+        $stderr.puts(str) if self.configuration.verbose
       end
 
       def panic(*args)
@@ -28,3 +28,4 @@ module Ripmp3
     end
   end
 end
+
