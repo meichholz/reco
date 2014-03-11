@@ -6,7 +6,7 @@ require 'ci/reporter/rake/rspec_loader'
 SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
 SimpleCov.start
 
-load File.join(File.dirname(__FILE__),'..','lib','ripmp3.rb')
+load File.join(File.dirname(__FILE__),'..','lib','reco.rb')
 
 $-w=false # set it back here, elseway rspec gets strange warning(s).
 
@@ -20,8 +20,8 @@ class GlobalFixtures
 end
 
 # build test environment without touching ARGV
-GlobalFixtures.cli_options=WML::WML.commandline_options(['-e', 'special' ]) # sets the stage for config_spec.rb
-WML::App.configuration = WML::Configuration.new(GlobalFixtures.cli_options)
+GlobalFixtures.cli_options=App.commandline_options(['-e', 'special' ]) # sets the stage for config_spec.rb
+Helper.configuration = Configuration.new(GlobalFixtures.cli_options)
 # WML::App.logger = WML::Logger.new(WML::App.configuration.logfilename)
-WML::App.configuration.debugmask = WML::Configuration.debug_flag(:wip)
+Helper.configuration.debugmask = Configuration.debug_flag(:wip)
 
