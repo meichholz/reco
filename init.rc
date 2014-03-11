@@ -1,5 +1,5 @@
 RUBY=ruby20
-#  INITCMD="rake dev:startup"
+# INITCMD="rake dev:startup"
 LANG="de_DE.utf8"
 umask 022
 
