@@ -39,6 +39,7 @@ GEM
     simplecov-html (0.8.0)
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
+    yard (0.8.7.3)
 
 PLATFORMS
   ruby
@@ -51,3 +52,4 @@ DEPENDENCIES
   rspec
   simplecov
   simplecov-rcov
+  yard

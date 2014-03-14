@@ -7,6 +7,7 @@ module Sut
       @env=:test
       @status=nil
       @output=nil
+      @frontend = 'bin/reco'
     end
     def push_arg(argv)
       @argv<<argv
@@ -16,7 +17,7 @@ module Sut
         args=String.new
       end
       args += " "+@argv.flatten.join(" ")
-      @output=`bundle exec bin/ripmp3 --environment=#{@env} #{args}`
+      @output=`bundle exec #{@frontend} --environment=#{@env} #{args}`
       @status=$?.exitstatus
       if $debug_app and @status!=0
         puts "app failed"
