@@ -31,6 +31,7 @@ module Reco
     class << self
       attr_reader :debug_masks
 
+      # @todo Klein
       def debug_mask_options(indentation="",trailer="")
         s=String.new
         @debug_masks.each do |key,value|
@@ -38,6 +39,7 @@ module Reco
         end
         s
       end
+      # @TODO gross
       def debug_flag(sym) # abstractor helper for testing code
         @debug_masks[sym]
       end
