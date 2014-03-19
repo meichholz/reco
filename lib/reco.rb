@@ -6,6 +6,7 @@ require 'time'
 @debug_autoload = ENV['DEBUG_AUTOLOAD']
 
 def load_modules
+  # @todo ugly...
   STDERR.printf "==> loading modules: " if @debug_autoload
   loadpath = File.join(File.dirname(__FILE__), File.basename(__FILE__, '.rb'), '') # include empty slash!
   basemodules = %w( version ).collect {|f| loadpath+f+'.rb'}
