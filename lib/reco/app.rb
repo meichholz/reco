@@ -28,6 +28,7 @@ module Reco
       :configfile => 0x0002,
       :all        => 0xFFFF,
     }
+    # @todolist
     class << self
       attr_reader :debug_masks
 
@@ -43,6 +44,7 @@ module Reco
       def debug_flag(sym) # abstractor helper for testing code
         @debug_masks[sym]
       end
+      # @think a bit around
       def debugging?(what)
         mask=Configuration.debug_masks[what]
         return false if mask.nil? 
