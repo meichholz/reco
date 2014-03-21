@@ -11,8 +11,11 @@ File.open(".yardopts", "w") do |f|
 --main=README.md
 --hide-void-return
 --default-return Unknown')
-  f.puts "-e #{File.join(ds_env.base_path, 'yard', 'me', 'plugin.rb')}"
+#  f.puts "-e #{File.join(ds_env.base_path, 'yard', 'me', 'plugin.rb')}"
+  f.puts "-e yardplay/plugin.rb"
 end
 
-
+task :e => :'doc:yard' do
+  sh "#{ds_env.browser} doc/Reco/Configuration.html"
+end
 
