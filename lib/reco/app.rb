@@ -1,3 +1,4 @@
+# @todolist
 module Reco
   class Options
     @writables = %w[debugmask]
@@ -28,7 +29,6 @@ module Reco
       :configfile => 0x0002,
       :all        => 0xFFFF,
     }
-    # @todolist
     class << self
       attr_reader :debug_masks
 
@@ -40,7 +40,6 @@ module Reco
         end
         s
       end
-      # @TODO gross
       def debug_flag(sym) # abstractor helper for testing code
         @debug_masks[sym]
       end
