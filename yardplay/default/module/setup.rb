@@ -1,6 +1,7 @@
 def init
   super
   sections.place(:todolist).after(:box_info)
+  # sections.place(:navbar).after(:header)
 end
 
 def todolist
