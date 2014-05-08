@@ -1,6 +1,7 @@
 tags
-/.yardopts
 /.yardoc/
 /.bundle/
 /doc/
+/coverage/
+
 

@@ -4,7 +4,9 @@
 
 # Status / Todo / Roadmap
 
-(TODO: Link to todolist)
+* rake::newb still broken
+* too complicated configuration boilerplate
+* Gli needed
 
 # ripping and so on...
 
