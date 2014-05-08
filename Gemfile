@@ -9,6 +9,11 @@ gem "hoe-yard", ">=0.1.2", :group => [:development, :test]
 gem "hoe-bundler", "~>1.2", :group => [:development, :test]
 gem "yard", ">=0", :group => [:development, :test]
 gem "redcarpet", ">=0", :group => [:development, :test]
+gem "rspec", ">=2.0", :group => [:development, :test]
+gem "cucumber", ">=0", :group => [:development, :test]
+gem "simplecov", ">=0", :group => [:development, :test]
+gem "simplecov-rcov", ">=0", :group => [:development, :test]
+gem "ci_reporter", ">=0", :group => [:development, :test]
 gem "hoe", "~>3.12", :group => [:development, :test]
 
 # vim: syntax=ruby

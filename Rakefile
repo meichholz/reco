@@ -4,9 +4,18 @@ ds_tasks_for :hoe
 projectname = ds_env.program_name
 load File.join(File.dirname(__FILE__), 'lib', projectname, 'version.rb')
 
-Hoe.plugins.delete :test # needs some more working integration
+# Hoe.plugins.delete :test # needs some more working integration
 # http://rubydoc.info/github/seattlerb/hoe/Hoe/Test
-^
+
+[
+  [ 'rspec', '>= 2.0' ],
+  [ 'cucumber' ],
+  [ 'simplecov' ], # , :require=>false ],
+  [ 'simplecov-rcov' ],
+  [ 'ci_reporter' ],
+].each { |spec| ds_env.dev_deps << spec }
+
+
 Hoe.spec projectname do
   developer "Marian Eichholz", "marian@bugslayer.de"
   ds_env.dev_deps.each do |spec|
