@@ -1,5 +1,6 @@
 tags
 /.yardopts
 /.yardoc/
+/.bundle/
 /doc/
 

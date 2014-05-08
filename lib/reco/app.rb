@@ -18,6 +18,8 @@ module Reco
       @environment = :production
       @mode = :unknown
       @debugmask = 0
+      @command = nil
+      @params = []
     end
   end
 
@@ -69,16 +71,19 @@ module Reco
 
     def setup(argv)
       setup_config(argv)
+      @command = argv.shift.to_sym
+      @params = argv
     end
 
-    def run(mode)
+    def run(command=nil)
+      command ||= @command
       $stdout.sync = true
       $stderr.sync = true
-      case mode
-      when 'test'
+      case command
+      when :wip
         puts "running quick test"
       else
-        Helper.panic "Unknown MODE, try '#{Helper.name} help'"
+        Helper.panic "Unknown command, try '#{Helper.name} help'"
       end
     end
 
@@ -99,7 +104,9 @@ module Reco
       end
       begin
         parser.parse! argv
-        puts parser if argv[0]=='help'
+        unless argv[0] and argv[0]!=''
+          Helper.panic parser, "\ncommand required"
+        end
       rescue OptionParser::ParseError => err
         Helper.panic parser, "\nFATAL: #{err}"
       end

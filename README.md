@@ -1,7 +1,11 @@
+# Reco
+
+* https://giles.bugslayer.de/jenkins/reco
+
 # Status / Todo / Roadmap
 
-@todolist
+(TODO: Link to todolist)
 
-# Manifesto: Automated installation, Stage 0
+# ripping and so on...
 
 

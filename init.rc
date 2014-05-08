@@ -1,4 +1,4 @@
-RUBY=ruby20
+RUBY=ruby21
 # INITCMD="rake dev:startup"
 LANG="de_DE.utf8"
 umask 022
