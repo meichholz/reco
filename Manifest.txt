@@ -8,4 +8,5 @@ bin/reco
 lib/reco/helper.rb
 lib/reco/version.rb
 lib/reco/app.rb
+lib/reco/commands.rb
 lib/reco.rb

@@ -19,9 +19,9 @@ class GlobalFixtures
   end
 end
 
-# build test environment without touching ARGV
-GlobalFixtures.cli_options=App.commandline_options(['-e', 'special' ]) # sets the stage for config_spec.rb
-Helper.configuration = Configuration.new(GlobalFixtures.cli_options)
-# WML::App.logger = WML::Logger.new(WML::App.configuration.logfilename)
-Helper.configuration.debugmask = Configuration.debug_flag(:wip)
+## build test environment without touching ARGV
+#GlobalFixtures.cli_options=App.commandline_options(['-e', 'special' ]) # sets the stage for config_spec.rb
+#Helper.configuration = Configuration.new(GlobalFixtures.cli_options)
+## WML::App.logger = WML::Logger.new(WML::App.configuration.logfilename)
+#Helper.configuration.debugmask = Configuration.debug_flag(:wip)
 
