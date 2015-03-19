@@ -14,8 +14,9 @@ Probably the original skript is not bad enough ;-)
 
 ## More documentation
 
-Since Github and Yard have to compatible Markdown-Reference-Scheme, the
-References are given in a table for convenience.
+Since Github and Yard appear to have incompatible Markdown-Reference-Schemes
+and no standard table syntax (even with github-markdown gem), the References
+are given in a pure HTML table for (in-) convenience. Apologies.
 
 <table>
 <tr><td>About Building </td>
