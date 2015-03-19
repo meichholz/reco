@@ -12,10 +12,22 @@ Well, this project appears to be in some indefinite hiatus. Apologies here.
 
 Probably the original skript is not bad enough ;-)
 
-## More documentation (GitHub)
+## More documentation
 
-* [About Building](BUILDING.md)
-* [Project History](History.md)
+Since Github and Yard have to compatible Markdown-Reference-Scheme, the
+References are given in a table for convenience.
+
+<table>
+<tr><td>About Building </td>
+  <td><a href="BUILDING.md">github</a></td>
+  <td><a href="file.BUILDING.html">local</a></td>
+</tr>
+<tr><td>A Project History </td>
+  <td><a href="History.md">github</a></td>
+  <td><a href="file.History.html">local</a></td>
+</table>
+
+
 
 ## Status / Todo / Roadmap
 

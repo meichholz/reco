@@ -14,6 +14,7 @@ GEM
     docile (1.1.3)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    github-markdown (0.6.8)
     hoe (3.12.0)
       rake (>= 0.8, < 11.0)
     hoe-bundler (1.2.0)
@@ -47,6 +48,7 @@ PLATFORMS
 DEPENDENCIES
   ci_reporter
   cucumber
+  github-markdown
   hoe (~> 3.12)
   hoe-bundler (~> 1.2)
   hoe-yard (>= 0.1.2)

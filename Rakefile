@@ -13,6 +13,7 @@ load File.join(File.dirname(__FILE__), 'lib', projectname, 'version.rb')
   [ 'simplecov' ], # , :require=>false ],
   [ 'simplecov-rcov' ],
   [ 'ci_reporter' ],
+  [ 'github-markdown' ],
 ].each { |spec| ds_env.dev_deps << spec }
 
 
