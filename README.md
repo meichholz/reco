@@ -1,18 +1,33 @@
-# Reco
+# Reco - a recoder frame
 
-* https://giles.bugslayer.de/jenkins/reco
+I already have an mp3 encoding script that can process a simple text form album
+description and recode that cdparanoia tracks into tagged MP3 or OGG files.
 
-# Status / Todo / Roadmap
+It is meant to have a DRY description and implement some **useful** standards
+on the file names. Namely, the files shall behave well on bad MP3 players.
+Erm... they all are broken in the ways they handle file names (sorting,
+displaying) so ... You have to take care of it.
+
+Well, this project appears to be in some indefinite hiatus. Apologies here.
+
+Probably the original skript is not bad enough ;-)
+
+## More documentation (GitHub)
+
+* [About Building](BUILDING.md)
+* [Project History](History.md)
+
+## Status / Todo / Roadmap
 
 * rake::newb still broken
 * too complicated configuration boilerplate
 * Gli needed
 
-# ripping and so on...
+## Ripping and so on...
 
 todo
 
-# License
+## License
 
 (The MIT License)
 

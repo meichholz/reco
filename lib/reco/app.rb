@@ -1,6 +1,6 @@
 # requires 'command.rb' for command infrastructure
 
-# @todolist
+# @alltodos
 module Reco
 
   class App
